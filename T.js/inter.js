@@ -21,5 +21,19 @@ document.getElementById("OK").addEventListener("click", function() {
                 formPilihan.appendChild(document.createElement("br"));
             }
             
-            
+            let submitButton = document.createElement("button");
+            submitButton.textContent = "OK";
+            submitButton.type = "button";
+            submitButton.id = "submitPilihan";
+            submitButton.addEventListener("click", function() {
+                let pilihanTerisi = [];
+                for (let i = 1; i <= jumlah; i++) {
+                    let nilai = document.getElementById("pilihan" + i).value;
+                    if (!nilai) {
+                        alert("Semua pilihan harus diisi!");
+                        return;
+                    }
+                    
+                }
+});
 });
