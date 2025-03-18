@@ -33,7 +33,24 @@ document.getElementById("OK").addEventListener("click", function() {
                         alert("Semua pilihan harus diisi!");
                         return;
                     }
-                    
+                    pilihanTerisi.push(nilai);
                 }
+                submitButton.classList.add("hidden");
+                let pilihanTampilan = document.createElement("div");
+                let labelPilihan = document.createElement("p");
+                labelPilihan.textContent = "Pilihan :";
+                pilihanTampilan.appendChild(labelPilihan);
+                
+                let select = document.createElement("select");
+                pilihanTerisi.forEach((text) => {
+                    let option = document.createElement("option");
+                    option.value = text;
+                    option.textContent = text;
+                    select.appendChild(option);
+                });
+                pilihanTampilan.appendChild(select);
+                pilihanTampilan.appendChild(document.createElement("br"));
+                
+
 });
 });
